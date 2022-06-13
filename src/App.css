@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
+/* Nav */
+.nav {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.377);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav p {
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* Header */
+.header {
+  min-height: 90vh;
+  padding: 30px 0px;
+  background-image: url(../public/images/bg-banner.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.header_bottom {
+  border-top: 1px solid rgba(128, 128, 128, 0.4);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+
+/* Testimonial */
+.testmonial {
+  display: grid;
+  grid-template-columns: 120px 1fr;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.student_img {
+  width: 100%;
+  height: 120px;
+  border-radius: 100px;
+  background-position: center;
+  background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.student_commments {
+  padding-left: 20px;
+}
+
+.student_commments>p {
+  margin: 0;
+  font-size: 18px;
+  color: rgb(173, 173, 173);
+}
+
+
+/* Learn */
+.learn {
+  min-height: 50vh;
+  padding: 100px 0px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.753), #0005), url(../public/images/bg-gray.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.learn_header>p {
+  color: rgb(173, 173, 173);
+  font-size: 18px;
+}
+
+.products {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.product_box {
+  background-image: linear-gradient(to bottom left, rgba(143, 0, 0, 0.08), rgba(0, 0, 0, 0.441), rgba(0, 0, 101, 0.189));
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  background-position: center;
+  min-width: 350px;
+  margin: 20px;
+}
+
+.product_img {
+  height: 40px;
+  border-radius: 10px;
+}
+
+.product_des {
+  color: rgb(206, 206, 206);
+  font-size: 16px;
+  margin: 0;
+  line-height: 22px;
+}
+
+.products::-webkit-scrollbar {
+  height: 8px;
+}
+
+.products::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.products::-webkit-scrollbar-thumb {
+  background-color: #262626;
+}
+
+
+/* Features */
+.features{
+  padding: 80px 0px;
+}
+.feature {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+}
+
+.feature_des {
+  padding-left: 20px;
+}
+
+.feature_des>p {
+  color: rgb(206, 206, 206);
+  font-size: 16px;
+}
+
+
+/* Partners */
+.partners{
+  min-height: 100vh;
+}
+
+/* Why */
+.why_container{
+  min-height: 90vh;
+}
+.why>p {
+  color: rgb(206, 206, 206);
+  font-size: 18px;
+}
+
+
+
+/* Pricing */
+.pricing{
+  min-height: 100vh;
+  padding: 80px 0px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.753), #0005), url(../public/images/bg-gray.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.price_box {
+  border: 1px solid gray;
+}
+
+.price_box>h6 {
+  color: rgba(156, 156, 156, 0.799);
+}
+
+.placement_box>div>h4 {
+  color: rgba(176, 176, 176, 0.763);
+}
+
+.placement_box>div>p {
+  margin: 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.763);
+}
+
+
+@media screen and (max-width:800px) {
+
+  /* Nav */
+  .nav_left {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+
+  .testmonial {
+    margin-bottom: 30px !important;
+    grid-template-columns: 70px 1fr;
+    align-items: flex-start;
   }
+
+  .student_img {
+    height: 70px;
+  }
+
+  .learn_header {
+    text-align: center;
+  }
+
+  .product_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    width: 200px !important;
+  }
+
+  .feature {
+    grid-template-columns: 1fr;
+  }
+
+  .feature_des {
+    padding: 0;
+    margin-top: 10px;
+  }
+  .price_box{
+    margin-top: 20px;
+  }
+
 }
